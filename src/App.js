@@ -7,12 +7,12 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
-    <Routes>
-      <Route index element={<SignIn/>}></Route>
-      <Route path = "login" element= {<SignIn/>}></Route>
-      <Route path = "register" element ={<SignUp/>}></Route>
-    </Routes>
+    <BrowserRouter basename="/demo_react">
+      <Routes>
+        <Route exact path="/demo_react" element={<SignIn/>}></Route>
+        <Route path = "/login" element= {<SignIn/>}></Route>
+        <Route path = "/register" element ={<SignUp/>}></Route>
+      </Routes>
     </BrowserRouter>
   );
 }
