@@ -7,14 +7,17 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
+    <div className='container'>
     <BrowserRouter basename="/demo_react">
       <Routes>
-        <Route exact path="/demo_react" element={<SignIn/>}></Route>
+        <Route path="/demo_react" exact element={<SignIn/>}></Route>
         <Route path = "/login" element= {<SignIn/>}></Route>
         <Route path = "/register" element ={<SignUp/>}></Route>
       </Routes>
     </BrowserRouter>
+    </div>
   );
+
 }
 
 export default App;
