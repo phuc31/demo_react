@@ -19,7 +19,6 @@ const SignUp = () => {
     
     return (
     <div className="sign-up-container">
-      useState("");
       <form onSubmit={signUp}>
         <h1>Create your account</h1>
         <input
@@ -34,7 +33,7 @@ const SignUp = () => {
           value={password}
           onChange = {(e) => setPassword(e.target.value)}
         ></input>
-        <button type="submit"></button>
+        <button type="submit">Create</button>
       </form>
     </div>
   );

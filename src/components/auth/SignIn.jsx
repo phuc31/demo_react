@@ -19,7 +19,6 @@ const SignIn = () => {
 
     return (
     <div className="sign-in-container">
-      useState("");
       <form onSubmit={signIn}>
         <h1>Login In to your account</h1>
         <input
@@ -31,10 +30,9 @@ const SignIn = () => {
         <input
           type={password}
           placeholder="Enter your password"
-          value={password}
-          onChange = {(e) => setPassword(e.target.value)}
+          value={password} onChange = {(e) => setPassword(e.target.value)}
         ></input>
-        <button type="submit"></button>
+        <button type="submit">Login</button>
       </form>
     </div>
   );
