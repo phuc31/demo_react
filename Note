@@ -1,0 +1,5 @@
+How to use Browser Router
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
+  <Route exact path="/" component={RecipeList} />
+  <Route path="/recipes/:id" component={RecipeItemDetails} />
+  </BrowserRouter>
