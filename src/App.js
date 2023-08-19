@@ -3,21 +3,20 @@ import './App.css';
 import SignIn from './components/auth/SignIn';
 import SignUp from './components/auth/SignUp';
 // import AuthDetail from './components/auth/AuthDetail';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
     <div className='container'>
-    <BrowserRouter basename="/demo_react">
+    <HashRouter basename="/demo_react">
       <Routes>
-        <Route path="/demo_react" exact element={<SignIn/>}></Route>
+        <Route path="/" element={<SignIn/>}></Route>
         <Route path = "/login" element= {<SignIn/>}></Route>
         <Route path = "/register" element ={<SignUp/>}></Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
     </div>
   );
-
 }
 
 export default App;
