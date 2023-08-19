@@ -20,6 +20,7 @@ const SignIn = () => {
 
     return (
     <div className="sign-in-container">
+      <meta http-equiv="Permissions-Policy" content="interest-cohort=()"></meta>
       <form onSubmit={signIn}>
         <h1>Login In to your account</h1>
         <input

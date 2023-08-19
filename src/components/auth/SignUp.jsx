@@ -19,6 +19,7 @@ const SignUp = () => {
     
     return (
     <div className="sign-up-container">
+      <meta http-equiv="Permissions-Policy" content="interest-cohort=()"></meta>
       <form onSubmit={signUp}>
         <h1>Create your account</h1>
         <input
