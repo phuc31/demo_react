@@ -57,7 +57,8 @@ const User = () => {
                         Object.values(data).map((todo) => {
                             console.log('data:')
                             console.log(todo)
-                            setTodos((oldArray) => [...oldArray, todo]);
+                            // setTodos((oldArray) => [...oldArray, todo]);
+                            setTodos(() => [todo]);
                         });
                     }
                 });
