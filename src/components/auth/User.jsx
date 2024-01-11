@@ -42,7 +42,7 @@ const User = () => {
     useEffect (() => {
         console.log('get auth')
         var myUser = '';
-        setTodos(null);
+        setTodos([]);
         const listen = onAuthStateChanged(auth, (user) => {
             if (user){
                 console.log('get auth success')
