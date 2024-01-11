@@ -48,21 +48,22 @@ const User = () => {
                 
                 setAuthUser(user);
                 myUser = user;
+
+                console.log('get data');
+                console.log(authUser.uid)
+                onValue(ref(db, `${authUser.uid}`), (snapshot) => {
+                    const data = snapshot.val();
+                    if (data !== null){
+                        Object.values(data).map((todo) => {
+                            console.log('data:')
+                            console.log(todo)
+                            setTodos((oldArray) => [...oldArray, todo]);
+                        });
+                    }
+                });
             }
             else{
                 setAuthUser(null);
-            }
-        });
-        console.log('get data');
-        console.log(authUser.uid)
-        onValue(ref(db, `${authUser.uid}`), (snapshot) => {
-            const data = snapshot.val();
-            if (data !== null){
-                Object.values(data).map((todo) => {
-                    console.log('data:')
-                    console.log(todo)
-                    setTodos((oldArray) => [...oldArray, todo]);
-                });
             }
         });
     }, []);
