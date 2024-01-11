@@ -84,6 +84,7 @@ const User = () => {
         // clear on screen after submit
         setVocab("");
         setMeaning("");
+        setTodos(null);
     }
 
   
