@@ -42,7 +42,7 @@ const User = () => {
     useEffect (() => {
         console.log('get auth')
         var myUser = '';
-        setTodos([]);
+
         const listen = onAuthStateChanged(auth, (user) => {
             if (user){
                 console.log('get auth success')
@@ -86,7 +86,7 @@ const User = () => {
         // clear on screen after submit
         setVocab("");
         setMeaning("");
-        setTodos(null);
+        setTodos([]);
     }
 
   
