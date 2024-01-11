@@ -97,8 +97,7 @@ const User = () => {
         <button onClick={write_vocab_to_database}>submit</button>
         {todos.map((todo) => (
         <>
-            <h1> {todo.vocab}</h1>
-            <h1>{todo.meaning}</h1>
+            <h1> {todo.vocab} mean: {todo.meaning}</h1>
         </>      
         ))}  
     </div>
