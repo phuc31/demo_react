@@ -51,14 +51,14 @@ const User = () => {
 
                 console.log('get data');
                 console.log(user.uid)
+                setTodos(null);
                 onValue(ref(db, `${user.uid}`), (snapshot) => {
                     const data = snapshot.val();
                     if (data !== null){
                         Object.values(data).map((todo) => {
                             console.log('data:')
                             console.log(todo)
-                            // setTodos((oldArray) => [...oldArray, todo]);
-                            setTodos(() => [todo]);
+                            setTodos((oldArray) => [...oldArray, todo]);
                         });
                     }
                 });
