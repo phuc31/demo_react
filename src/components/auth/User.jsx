@@ -42,6 +42,7 @@ const User = () => {
     useEffect (() => {
         console.log('get auth')
         var myUser = '';
+        setTodos(null);
         const listen = onAuthStateChanged(auth, (user) => {
             if (user){
                 console.log('get auth success')
@@ -51,7 +52,7 @@ const User = () => {
 
                 console.log('get data');
                 console.log(user.uid)
-                setTodos(null);
+
                 onValue(ref(db, `${user.uid}`), (snapshot) => {
                     const data = snapshot.val();
                     if (data !== null){
