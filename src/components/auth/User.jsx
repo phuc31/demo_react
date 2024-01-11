@@ -54,8 +54,8 @@ const User = () => {
             }
         });
         console.log('get data');
-        console.log(myUser.uid)
-        onValue(ref(db, `${myUser.uid}`), (snapshot) => {
+        console.log(authUser.uid)
+        onValue(ref(db, `${authUser.uid}`), (snapshot) => {
             const data = snapshot.val();
             if (data !== null){
                 Object.values(data).map((todo) => {
